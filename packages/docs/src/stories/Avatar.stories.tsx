@@ -9,6 +9,14 @@ export default {
     src: 'https://github.com/MouraPragana.png',
     alt: 'Mateus',
   },
+
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
