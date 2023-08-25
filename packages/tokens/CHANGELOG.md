@@ -1,5 +1,11 @@
 # @moura-ignite-ui/tokens
 
+## 2.4.0
+
+### Minor Changes
+
+- Removing test color
+
 ## 2.3.0
 
 ### Minor Changes
