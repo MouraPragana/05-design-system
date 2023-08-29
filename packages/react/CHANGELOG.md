@@ -1,5 +1,11 @@
 # @moura-ignite-ui/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Creating a new component called Tooltip
+
 ## 2.0.1
 
 ### Patch Changes
