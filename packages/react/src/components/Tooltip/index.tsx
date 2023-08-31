@@ -1,4 +1,4 @@
-import { ComponentProps } from '@stitches/react'
+import { ComponentProps, ReactNode } from 'react'
 import {
   TooltipArrow,
   TooltipContent,
@@ -9,22 +9,19 @@ import {
 } from './styles'
 
 export interface TooltipProps extends ComponentProps<typeof TooltipProvider> {
-  baseText: string
-  tooltipText: string
-  side?: 'top' | 'right' | 'bottom' | 'left' | undefined
-  align?: 'center' | 'end' | 'start' | undefined
+  component: ReactNode
+  tooltip: ReactNode | string
 }
 
-export function Tooltip({ baseText, tooltipText, side, align }: TooltipProps) {
+export function Tooltip(props: TooltipProps) {
   return (
-    <TooltipProvider delayDuration={0}>
+    <TooltipProvider {...props}>
       <TooltipRoot>
-        <TooltipTrigger asChild>
-          <span>{baseText}</span>
-        </TooltipTrigger>
+        <TooltipTrigger asChild>{props.component}</TooltipTrigger>
+
         <TooltipPortal>
-          <TooltipContent side={side} align={align}>
-            <span>{tooltipText}</span>
+          <TooltipContent {...props}>
+            {props.tooltip}
             <TooltipArrow />
           </TooltipContent>
         </TooltipPortal>

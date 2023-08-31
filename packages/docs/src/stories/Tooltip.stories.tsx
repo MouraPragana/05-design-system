@@ -5,20 +5,25 @@ export default {
   title: 'Visual/Tooltip',
   component: Tooltip,
 
+  args: {
+    sideOffset: 5,
+    component: <span>21</span>,
+    tooltip: <span>21 de Outubro - disponível</span>,
+    delayDuration: 0,
+    side: undefined,
+    align: undefined,
+  },
+
   decorators: [
     (Story) => {
       return (
         <Box
           css={{
-            minWidth: '$16',
-            maxWidth: 'max-content',
+            height: 'fit-content',
+            width: 'fit-content',
             display: 'flex',
             margin: '$16 auto',
-            justifyContent: 'center',
-            alignContent: 'center',
-            borderRadius: '$sm',
             boxSizing: 'border-box',
-            padding: '$4 $7 $4 $7',
           }}
         >
           {Story()}
@@ -44,11 +49,4 @@ export default {
   },
 } as Meta<TooltipProps>
 
-export const Primary: StoryObj<TooltipProps> = {
-  args: {
-    baseText: 'Base text',
-    tooltipText: 'Tooltip text',
-    side: 'top',
-    align: 'center',
-  },
-}
+export const Primary: StoryObj<TooltipProps> = {}

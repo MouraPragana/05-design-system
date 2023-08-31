@@ -1,5 +1,11 @@
 # @moura-ignite-ui/react
 
+## 2.1.0
+
+### Minor Changes
+
+- Created two new components - Toast and Tooltip
+
 ## 2.0.2
 
 ### Patch Changes
